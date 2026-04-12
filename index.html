@@ -4,41 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="script.js"></script>
+
 <body>
     <nav>
-        <a href="#about">About</a>
-        <a href="#Skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <h2 class="logo">My Portfolio</h2>
+        <div>
+            <a href="#about">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
-    <header>
+    <section class="hero">
         <h1>Hi, I'm Zeel Agotariya</h1>
         <p>BSc IT Student  |  Passionate about web development and technology</p>
-    </header>
+        <button onclick="scrollToSection()">View My Work</button>
+    </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a passionate BSc IT student with a strong interest in web development and emerging technologies. I enjoy creating innovative solutions.</p>
+        <p>I am a passionate BSc IT student with a strong interest in web development and building real-world projects.</p>
     </section>
 
     <section id="Skills">
         <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
+        <div class="card-container">
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">Python</div>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <ul>
-            <li><strong>Personal Portfolio Website:</strong> A responsive website showcasing my skills and projects.</li>
-        </ul>
+        <div class="card-container">
+            <div class="card">Personal Portfolio Website</div>
+        </div>
     </section>
 
     <section id="contact">
@@ -46,5 +53,7 @@
         <p>Feel free to reach out to me!</p>
         <p>Email: zeelagotariya@gmail.com</p>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
