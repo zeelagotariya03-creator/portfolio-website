@@ -1,22 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
     background: #0f172a;
     color: white;
 }
 
 nav {
     background: #020617;
-    padding: 15px 50px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 nav a {
     color: white;
-    margin: 0 10px;
+    margin: 0 12px;
     text-decoration: none;
 }
 
@@ -25,48 +32,100 @@ nav a:hover {
 }
 
 .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 55px;
+}
+
+.hero h2 {
+    margin: 10px 0;
+    color: #38bdf8;
+}
+
+.hero p {
+    margin: 10px 0 20px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 .hero button {
-    margin-top: 10px;
-    padding: 10px 20px;
     background: #38bdf8;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.hero button:hover {
-    background: #0ea5e9;
+.resume {
+    background: #1e293b;
+    color: white;
 }
 
-.card-container {
+.card-container,.project-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.card {
+.card,.project-card {
     background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 15px;
     transition: 0.3s;
+    width: 250px;
 }
 
-.card:hover {
-    transform: scale(1.1);
+.card:hover,.project-card:hover {
+    transform: translateY(-10px);
     background: #334155;
 }
 
 section {
-    padding: 50px;
+    padding: 70px 50px;
     text-align: center;
+}
+
+.project-card p {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
 }
