@@ -7,12 +7,28 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0f172a;
+    background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
     color: white;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 nav {
-    background: #020617;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
@@ -23,22 +39,23 @@ nav {
 
 nav a {
     color: white;
-    margin: 0 12px;
+    margin-left: 15px;
     text-decoration: none;
-}
-
-nav a:hover {
-    color: #38bdf8;
 }
 
 .hero {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
+}
+
+.hero-box {
+    max-width: 700px;
+    padding: 50px;
+    border-radius: 25px;
 }
 
 .hero h1 {
@@ -50,62 +67,78 @@ nav a:hover {
     color: #38bdf8;
 }
 
-.hero p {
-    margin: 10px 0 20px;
+.btns {
+    margin-top: 20px;
 }
 
 button {
     padding: 12px 22px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    margin: 5px;
+    margin: 6px;
     font-weight: bold;
-}
-
-button:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-.hero button {
     background: #38bdf8;
 }
 
-.resume {
-    background: #1e293b;
+.outline {
+    background: transparent;
+    border: 1px solid white;
     color: white;
 }
 
-.card-container,.project-grid {
+button:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+.grid {
     display: flex;
     gap: 20px;
-    justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
-.card,.project-card {
-    background: #1e293b;
+.card {
     padding: 25px;
-    border-radius: 15px;
-    transition: 0.3s;
-    width: 250px;
+    border-radius: 20px;
+    width: 260px;
 }
 
-.card:hover,.project-card:hover {
-    transform: translateY(-10px);
-    background: #334155;
+.card p {
+    margin: 15px 0;
+    font-size: 14px;
 }
 
 section {
-    padding: 70px 50px;
+    padding: 80px 30px;
     text-align: center;
 }
 
-.project-card p {
-    margin: 15px 0;
-    font-size: 14px;
+section box {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}   
+
+textarea {
+    resize: none;
+    height: 120px;
 }
 
 .hidden {
@@ -127,5 +160,8 @@ section {
     }
     .hero h1 {
         font-size: 38px;
+    }
+    .hero-box {
+        padding: 30px;
     }
 }
